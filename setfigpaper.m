@@ -185,7 +185,7 @@ for iaxis=1:length(haxis)
     end
     % Grayscale
     if grayscale == 1
-        haxis(iaxis).Colormap = rgb2gray(haxis(iaxis).Colormap);
+        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
         haxis(iaxis).ColorOrder = rgb2gray(haxis(iaxis).ColorOrder);
         
         for jj = 1:length(haxis(iaxis).Children)
@@ -275,7 +275,7 @@ for iaxis=1:length(polaxis)
     end
     % Grayscale
     if grayscale == 1
-        polaxis(iaxis).Colormap = rgb2gray(polaxis(iaxis).Colormap);
+        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
         polaxis(iaxis).ColorOrder = rgb2gray(polaxis(iaxis).ColorOrder);
         for jj = 1:length(polaxis(iaxis).Children)
             try %#ok<TRYNC>
@@ -474,7 +474,7 @@ for iaxis=1:length(heataxis)
     end
     % Grayscale
     if grayscale == 1
-        heataxis(iaxis).Colormap = rgb2gray(heataxis(iaxis).Colormap);
+        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
     end
 end
 
