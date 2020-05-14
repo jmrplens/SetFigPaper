@@ -1,4 +1,4 @@
-<div style="table{ width:100%;}">
+
 	
 # SetFigPaper
 
@@ -40,6 +40,7 @@ The available options are:
 <a id="examples"></a>
 # Examples
 
+<div style="table{ width:100%;}">
 	
 <a id="grayscale"></a>
 ## Grayscale
