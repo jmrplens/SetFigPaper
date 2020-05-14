@@ -18,7 +18,7 @@ function setfigpaper(varargin)
 %   - 'Interpreter' Text interpreter syntax, 'Latex', 'tex' or 'none'.
 %                   If you don't want to modify the interpreter the value must be [] (empty value).
 %                   Examples: ('Interpreter','Latex')
-%                   Default: 'tex'
+%                   Default: []
 %   - 'Grayscale'   Change all colours to grayscale. [boolean]
 %                   Examples: ('Grayscale',1)
 %                   Default: 0
@@ -91,7 +91,7 @@ addOptional(p,'Width',[19.7556 0.75],...        % Default: [19.7556 0.75]
 addOptional(p,'FontSize',10,...                 % Default: 10
     @(x) isnumeric(x) && isscalar(x));       	
 addOptional(p,'FontName','Helvetica',@ischar);	% Default: Helvetica
-addOptional(p,'Interpreter','tex');          	% Default: tex
+addOptional(p,'Interpreter',[]);                % Default: []
 addOptional(p,'Grayscale',0,...                 % Default: false or 0
     @(x) x==0 || x==1);                             
 addOptional(p,'LineWidth',0.5,...               % Default: 0.5
