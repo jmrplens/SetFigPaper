@@ -1,8 +1,25 @@
 <div style="width:100%;">
 
-# SetFigPaper
-Function to modify the style of the graphical representations of MATLAB
+# Introduction
+With this function it is possible to modify multiple style parameters of MATLAB graphic representations. It is only necessary to include the function call after the graphic representation code, that's all.
 
+It can be used in two ways:
+
+* Name-Value pair arguments: `setfigpaper('Width',[20,0.65],'Interpreter','Latex')`
+* Arguments only: `setfigpaper([20,0.65],10,'Helvetica','Latex')` (With explicit order: Width,FontSize,FontName,Interpreter,Grayscale,LineWidth)
+
+The available options are:
+
+| Name        | Description         | 
+| ------------- | ------------- |
+| `Width`       | Simple: one integer. With aspect ratio: array with two elements, the width and the aspect ratio. |          
+| `FontSize`    | The font size in all texts in the figure. |
+| `FontName`    | Font family. |
+| `Interpreter` | Text interpreter syntax, 'Latex', 'tex' or 'none'. |
+| `Grayscale`   | Change all colours to grayscale. [boolean] |
+| `LineWidth`   | Set line width only for axes, not for data. |
+
+# Examples
 
 ## Grayscale
 
@@ -96,6 +113,12 @@ Function to modify the style of the graphical representations of MATLAB
 | Original        | `setfigpaper('LineWidth',1.5)`           | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
+
+
+# Author
+Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
+
+Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
 
 
 </div>
