@@ -16,6 +16,7 @@ function setfigpaper(varargin)
 %                   Examples: ('FontName','Arial')
 %                   Default: 'Helvetica'
 %   - 'Interpreter' Text interpreter syntax, 'Latex', 'tex' or 'none'.
+%                   If you don't want to modify the interpreter the value must be [].
 %                   Examples: ('Interpreter','Latex')
 %                   Default: 'tex'
 %   - 'Grayscale'   Change all colours to grayscale. [boolean]
