@@ -818,3 +818,5 @@ end
 % End process
 drawnow
 set(0,'ShowHiddenHandles','off');
+set(gcf, 'PaperPosition', [0 0 fwidth(1) fwidth(1)*aspect]);
+set(gcf, 'PaperSize', [fwidth(1) fwidth(1)*aspect]);
