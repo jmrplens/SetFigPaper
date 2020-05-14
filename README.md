@@ -1,4 +1,4 @@
-<div class="foo" style="width:100%;">
+
 
 # SetFigPaper
 Function to modify the style of the graphical representations of MATLAB
@@ -33,4 +33,4 @@ Function to modify the style of the graphical representations of MATLAB
 
 
 ### LineWidth
-</div>
+...</div>
