@@ -141,6 +141,7 @@ The available options are:
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
 
 
+</div>
 
 <a id="author"></a>
 # Author
@@ -149,4 +150,4 @@ Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
 Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
 
 
-</div>
+
