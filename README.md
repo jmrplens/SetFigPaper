@@ -48,9 +48,9 @@ Function to modify the style of the graphical representations of MATLAB
 
 **Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Heatmap Chart (https://www.mathworks.com/matlabcentral/fileexchange/63457-matlab-plot-gallery-heatmap-chart), MATLAB Central File Exchange. Retrieved May 14, 2020.
 
-| Original        | setfigpaper('FontName','SansSerif')          | 
+| Original        | setfigpaper('FontName','Courier')          | 
 |:-------------:|:-------------:|
-| <img src="http://jmrplens.com/GitHub_setfigpaper/plot3a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot5bb.png" width="100%"></img>  |
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot3aa.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot3bc.png" width="100%"></img>  |
 
 ### Example 2
 
@@ -62,6 +62,21 @@ Function to modify the style of the graphical representations of MATLAB
 
 ## FontSize
 
+### Example 1
+
+**Code:** https://www.mathworks.com/help/matlab/ref/parallelplot.html
+
+| Original        | setfigpaper('FontSize',6)          | 
+|:-------------:|:-------------:|
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot7a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot7b.png" width="100%"></img>  |
+
+### Example 2
+
+**Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Heatmap Chart (https://www.mathworks.com/matlabcentral/fileexchange/63457-matlab-plot-gallery-heatmap-chart), MATLAB Central File Exchange. Retrieved May 14, 2020.
+
+| Original        | setfigpaper('FontName','Times New Roman')           | 
+|:-------------:|:-------------:|
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot3a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot6b.png" width="100%"></img>  |
 
 
 ## LineWidth
