@@ -1,24 +1,24 @@
-<div style="width:100%;">
-<!-- MarkdownTOC -->
 
-- Introduction
-- Examples
-	- Grayscale
-		- Example 1
-		- Example 2
-	- Interpreter
-		- Example 1
-		- Example 2
-	- FontName
-		- Example 1
-		- Example 2
-	- FontSize
-		- Example 1
-		- Example 2
-	- LineWidth
-		- Example 1
-		- Example 2
-- Author
+<!-- MarkdownTOC autolink="true" -->
+
+- [Introduction](#introduction)
+- [Examples](#examples)
+	- [Grayscale](#grayscale)
+		- [Example 1](#example-1)
+		- [Example 2](#example-2)
+	- [Interpreter](#interpreter)
+		- [Example 1](#example-1-1)
+		- [Example 2](#example-2-1)
+	- [FontName](#fontname)
+		- [Example 1](#example-1-2)
+		- [Example 2](#example-2-2)
+	- [FontSize](#fontsize)
+		- [Example 1](#example-1-3)
+		- [Example 2](#example-2-3)
+	- [LineWidth](#linewidth)
+		- [Example 1](#example-1-4)
+		- [Example 2](#example-2-4)
+- [Author](#author)
 
 <!-- /MarkdownTOC -->
 
@@ -145,4 +145,3 @@ Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
 
 
 
-</div>
