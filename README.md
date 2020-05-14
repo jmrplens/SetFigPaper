@@ -31,7 +31,7 @@ The available options are:
 | `Width`       | Simple: one integer. With aspect ratio: array with two elements, the width and the aspect ratio. |          
 | `FontSize`    | The font size in all texts in the figure. |
 | `FontName`    | Font family. |
-| `Interpreter` | Text interpreter syntax, 'Latex', 'tex' or 'none'. |
+| `Interpreter` | Text interpreter syntax, 'Latex', 'tex' or 'none'. If you don't want to modify the `interpreter` the value must be `[]`. |
 | `Grayscale`   | Change all colours to grayscale. [boolean] |
 | `LineWidth`   | Set line width only for axes, not for data. |
 	
