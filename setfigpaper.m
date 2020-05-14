@@ -110,10 +110,10 @@ else
     aspect = fwidth(2);
 end
 if isempty(type)
-    notype = 1;
+    notype = 1; % Unmodified interpreter
 else
     validatestring(type,{'tex','latex','none'});
-    notype = 0;
+    notype = 0; % Modified interpreter
 end
 % Common Colors
 Black = [0 0 0];
