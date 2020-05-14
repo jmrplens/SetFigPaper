@@ -1,4 +1,27 @@
 <div style="width:100%;">
+<!-- MarkdownTOC -->
+
+- Introduction
+- Examples
+	- Grayscale
+		- Example 1
+		- Example 2
+	- Interpreter
+		- Example 1
+		- Example 2
+	- FontName
+		- Example 1
+		- Example 2
+	- FontSize
+		- Example 1
+		- Example 2
+	- LineWidth
+		- Example 1
+		- Example 2
+- Author
+
+<!-- /MarkdownTOC -->
+
 
 # Introduction
 With this function it is possible to modify multiple style parameters of MATLAB graphic representations. It is only necessary to include the function call after the graphic representation code, that's all.
@@ -119,6 +142,7 @@ The available options are:
 Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
 
 Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
+
 
 
 </div>
