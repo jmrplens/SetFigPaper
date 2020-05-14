@@ -1,28 +1,19 @@
 
-<!-- MarkdownTOC autolink="true" -->
+<!-- MarkdownTOC autolink="true" levels="1,2" bracket="round" autoanchor="true" style="unordered" indent="\t" -->
 
 - [Introduction](#introduction)
 - [Examples](#examples)
 	- [Grayscale](#grayscale)
-		- [Example 1](#example-1)
-		- [Example 2](#example-2)
 	- [Interpreter](#interpreter)
-		- [Example 1](#example-1-1)
-		- [Example 2](#example-2-1)
 	- [FontName](#fontname)
-		- [Example 1](#example-1-2)
-		- [Example 2](#example-2-2)
 	- [FontSize](#fontsize)
-		- [Example 1](#example-1-3)
-		- [Example 2](#example-2-3)
 	- [LineWidth](#linewidth)
-		- [Example 1](#example-1-4)
-		- [Example 2](#example-2-4)
 - [Author](#author)
 
 <!-- /MarkdownTOC -->
 
 
+<a id="introduction"></a>
 # Introduction
 With this function it is possible to modify multiple style parameters of MATLAB graphic representations. It is only necessary to include the function call after the graphic representation code, that's all.
 
@@ -42,8 +33,10 @@ The available options are:
 | `Grayscale`   | Change all colours to grayscale. [boolean] |
 | `LineWidth`   | Set line width only for axes, not for data. |
 
+<a id="examples"></a>
 # Examples
 
+<a id="grayscale"></a>
 ## Grayscale
 
 ### Example 1
@@ -63,6 +56,7 @@ The available options are:
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot2a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot2b.png" width="100%"></img>  |
 
 
+<a id="interpreter"></a>
 ## Interpreter
 
 ### Example 1
@@ -81,6 +75,7 @@ The available options are:
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot4a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot4b.png" width="100%"></img>  |
 
+<a id="fontname"></a>
 ## FontName
 * *Only work with 'Tex' interpreter*
 
@@ -100,6 +95,7 @@ The available options are:
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot3a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot6b.png" width="100%"></img>  |
 
+<a id="fontsize"></a>
 ## FontSize
 
 ### Example 1
@@ -119,6 +115,7 @@ The available options are:
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot8a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot8b.png" width="100%"></img>  |
 
 
+<a id="linewidth"></a>
 ## LineWidth
 
 ### Example 1
@@ -138,6 +135,7 @@ The available options are:
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
 
 
+<a id="author"></a>
 # Author
 Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
 
