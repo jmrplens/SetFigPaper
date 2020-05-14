@@ -52,4 +52,4 @@ title('Tuberculosis Cases')
 axis([1988 2009 5 20])
 
 %% SETFIGPAPER
-setfigpaper('Width',[15,0.5],'Interpreter','Latex','FontSize',9)
+setfigpaper('Width',[30,0.5],'Interpreter','Latex','FontSize',11,'linewidth',1)
