@@ -39,8 +39,6 @@ The available options are:
 	
 <a id="examples"></a>
 # Examples
-
-<div style="table{ width:100%;}">
 	
 <a id="grayscale"></a>
 ## Grayscale
@@ -49,10 +47,11 @@ The available options are:
 
 **Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Wind (https://www.mathworks.com/matlabcentral/fileexchange/35250-matlab-plot-gallery-wind), MATLAB Central File Exchange. Retrieved May 14, 2020.
 
+<div style="table{ width:100%;}">
 | Original        | `setfigpaper('GrayScale',true)`          | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot1a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot1b.png" width="100%"></img>  |
-
+</div>
 ### Example 2
 
 **Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Subplot (2) (https://www.mathworks.com/matlabcentral/fileexchange/35298-matlab-plot-gallery-subplot-2), MATLAB Central File Exchange. Retrieved May 14, 2020.
@@ -139,9 +138,6 @@ The available options are:
 | Original        | `setfigpaper('LineWidth',1.5)`           | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
-
-
-</div>
 
 <a id="author"></a>
 # Author
