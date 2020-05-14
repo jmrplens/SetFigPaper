@@ -48,9 +48,11 @@ The available options are:
 **Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Wind (https://www.mathworks.com/matlabcentral/fileexchange/35250-matlab-plot-gallery-wind), MATLAB Central File Exchange. Retrieved May 14, 2020.
 
 <div style="table{ width:100%;}">
+	
 | Original        | `setfigpaper('GrayScale',true)`          | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot1a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot1b.png" width="100%"></img>  |
+
 </div>
 ### Example 2
 
