@@ -1,3 +1,7 @@
+<div style="width:100%;">
+	
+# SetFigPaper
+
 
 <!-- MarkdownTOC autolink="true" levels="1,2" bracket="round" autoanchor="true" style="unordered" indent="\t" -->
 
@@ -141,5 +145,5 @@ Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
 
 Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
 
-
+</div>
 
