@@ -60,7 +60,7 @@ The available options are:
 
 | Original        | `setfigpaper('GrayScale',true)`          | 
 |:-------------:|:-------------:|
-| <img src="http://jmrplens.com/GitHub_setfigpaper/plot2a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot2b.png" width="100%"></img>  |
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot2a.png"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot2b.png"></img>  |
 
 
 <a id="interpreter"></a>
