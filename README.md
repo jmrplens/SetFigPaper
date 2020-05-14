@@ -37,9 +37,11 @@ The available options are:
 | `Grayscale`   | Change all colours to grayscale. [boolean] |
 | `LineWidth`   | Set line width only for axes, not for data. |
 
+<div style="width:100%;">
+	
 <a id="examples"></a>
 # Examples
-<div style="width:100%;">
+
 	
 <a id="grayscale"></a>
 ## Grayscale
