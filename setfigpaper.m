@@ -90,8 +90,7 @@ addOptional(p,'Width',[19.7556 0.75],...        % Default: [19.7556 0.75]
 addOptional(p,'FontSize',10,...                 % Default: 10
     @(x) isnumeric(x) && isscalar(x));       	
 addOptional(p,'FontName','Helvetica',@ischar);	% Default: Helvetica
-addOptional(p,'Interpreter','tex',...          	% Default: tex
-    @(x) any(validatestring(x,{'tex','latex','none'})));
+addOptional(p,'Interpreter','tex');          	% Default: tex
 addOptional(p,'Grayscale',0,...                 % Default: false or 0
     @(x) x==0 || x==1);                             
 addOptional(p,'LineWidth',0.5,...               % Default: 0.5
@@ -108,6 +107,12 @@ if length(fwidth) == 1
     aspect = 0.75;
 else
     aspect = fwidth(2);
+end
+if isempty(type)
+    notype = 1;
+else
+    validatestring(type,{'tex','latex','none'});
+    notype = 0;
 end
 % Common Colors
 Black = [0 0 0];
@@ -128,7 +133,10 @@ set(gcf,'color',White); % General Background
 set(findobj(gcf,'color',[0.15 0.15 0.15]),'color',Black); % Gray to black
 % General text
 txt = findobj(gcf, 'Type', 'Text');
-arrayfun(@(x) set(x,'Fontname',font,'FontSize', fsize,'Interpreter', type), txt) ;
+arrayfun(@(x) set(x,'Fontname',font,'FontSize', fsize), txt) ;
+if notype == 0
+arrayfun(@(x) set(x,'Interpreter', type), txt) ;
+end
 
 set(0,'ShowHiddenHandles','on'); % For hidden objects (e.g. annotations)
 
@@ -148,18 +156,32 @@ for iaxis=1:length(haxis)
     set(haxis(iaxis),'box','on');
     % Text properties
     ht=findobj(haxis(iaxis),'type','text'); % Get all text
-    set(ht,'fontname',font,'fontsize',fsize,'interpreter',type,'color',Black);
-    set(haxis(iaxis),'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
+    set(ht,'fontname',font,'fontsize',fsize,'color',Black);
+    set(haxis(iaxis),'fontname',font,'fontsize',fsize)
     set(haxis(iaxis),'XMinorTick','on','YMinorTick','on','ZMinorTick','on')
+    if notype == 0
+        set(ht,'interpreter',type);
+    set(haxis(iaxis),'TickLabelInterpreter',type)
+    end
     % Axis labels
     set([haxis(iaxis).XLabel haxis(iaxis).YLabel haxis(iaxis).ZLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+       set([haxis(iaxis).XLabel haxis(iaxis).YLabel haxis(iaxis).ZLabel],...
+        'interpreter',type); 
+    end
     % Title
-    set(haxis(iaxis).Title,'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(haxis(iaxis).Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(haxis(iaxis).Title,'interpreter',type);
+    end
     % Text for nodes for graphplots
     grap = findobj(haxis(iaxis),'Type','graphplot');
-    set(grap,'nodefontname',font,'nodefontsize',fsize,'interpreter',type,...
+    set(grap,'nodefontname',font,'nodefontsize',fsize,...
         'EdgeFontSize',fsize-2,'EdgeFontName',font)
+    if notype == 0
+        set(grap,'interpreter',type)
+    end
     % Grayscale
     if grayscale == 1
         haxis(iaxis).Colormap = rgb2gray(haxis(iaxis).Colormap);
@@ -222,7 +244,9 @@ for iaxis=1:length(haxis)
             if isa(ax.NodeChildren(jj),'matlab.graphics.primitive.world.Text')
                 ax.NodeChildren(jj).Font.Name = font;
                 ax.NodeChildren(jj).Font.Size  = fsize;
+                if notype == 0
                 ax.NodeChildren(jj).Interpreter= type;
+                end
             end
         end
     end
@@ -237,11 +261,17 @@ for iaxis=1:length(polaxis)
     % Radial Text
     set(polaxis(iaxis).RAxis,'fontname',font,'fontsize',fsize,'color',Black);
     % Title
-    set(polaxis(iaxis).Title,'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(polaxis(iaxis).Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+      set(polaxis(iaxis).Title,'interpreter',type);  
+    end
     % General axis
-    set(polaxis(iaxis),'TickLabelInterpreter',type,...
+    set(polaxis(iaxis),...
         'LineWidth',lwidth,'Color',White,'GridColor',Black,'MinorGridColor',Black,...
         'RColor',Black,'ThetaColor',Black)
+    if notype == 0
+        set(polaxis(iaxis),'TickLabelInterpreter',type)
+    end
     % Grayscale
     if grayscale == 1
         polaxis(iaxis).Colormap = rgb2gray(polaxis(iaxis).Colormap);
@@ -293,16 +323,25 @@ for iaxis=1:length(staxis)
             'MinorGridColor',Black,'GridColor',Black);
         % Text
         ht = findobj(ax.Axes,'Type','Text');
-        set (ht,'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type)
+        set (ht,'fontname',font,'fontsize',fsize,'color',Black)
+        if notype == 0
+           set (ht,'interpreter',type) 
+        end
         % Axis texts (tickslabels)
-        set(ax.Axes,'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
+        set(ax.Axes,'fontname',font,'fontsize',fsize)
+        if notype == 0
+          set(ax.Axes,'TickLabelInterpreter',type)  
+        end
     end
     % Legend
     warning('off','MATLAB:structOnObject')
     bx = struct(staxis(iaxis));
     warning('on','MATLAB:structOnObject')
     set(bx.LegendHandle,'Color',White,'EdgeColor',Black,'FontName',font,'FontSize',fsize,...
-        'Interpreter',type,'LineWidth',lwidth)
+        'LineWidth',lwidth)
+    if notype == 0
+        set(bx.LegendHandle,'Interpreter',type)
+    end
     % Grayscale
     if grayscale == 1
         staxis(iaxis).Color = rgb2gray(staxis(iaxis).Color);
@@ -341,16 +380,27 @@ for iaxis=1:length(scataxis)
     % Axis linewidth
     set(ax.Axes,'linewidth',lwidth);
     % Title
-    set(ax.Axes.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Axes.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(ax.Axes.Title,'interpreter',type);
+    end
     % Axis labels
     set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+       set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],'interpreter',type); 
+    end
     % Axis texts (tickslabels)
-    set(ax.Axes,'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
+    set(ax.Axes,'fontname',font,'fontsize',fsize)
+    if notype == 0
+        set(ax.Axes,'TickLabelInterpreter',type)
+    end
     % Legend
     set(ax.NodeChildren(1),...
-        'fontname',font,'fontsize',fsize,'interpreter',type);
+        'fontname',font,'fontsize',fsize);
+    if notype == 0
+        set(ax.NodeChildren(1),'interpreter',type);
+    end
     set(ax.NodeChildren(1),'EdgeColor',Black,'LineWidth',lwidth);
     for jj = 2:length(ax.NodeChildren)
         axnode = ax.NodeChildren(jj);
@@ -360,10 +410,15 @@ for iaxis=1:length(scataxis)
         set(axnode,'XColor',Black,'YColor',Black,'ZColor',Black)
         % Axis labels
         set([axnode.XLabel axnode.YLabel axnode.ZLabel],...
-            'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+            'fontname',font,'fontsize',fsize,'color',Black);
+        if notype == 0
+            set([axnode.XLabel axnode.YLabel axnode.ZLabel],'interpreter',type);
+        end
         % Title
-        set(axnode.Title,...
-            'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        set(axnode.Title,'fontname',font,'fontsize',fsize,'color',Black);
+        if notype == 0
+           set(axnode.Title,'interpreter',type); 
+        end
     end
     
 end
@@ -382,23 +437,39 @@ for iaxis=1:length(heataxis)
     % Axis line
     set(ax.Axes,'linewidth',lwidth,'GridColor',Black,'MinorGridColor',Black);
     % Title
-    set(ax.Axes.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Axes.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+      set(ax.Axes.Title,'interpreter',type);  
+    end
     % Axis labels
     set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+      set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],...
+        'interpreter',type);  
+    end
     % Axis texts (tickslabels)
-    set(ax.Axes,'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
+    set(ax.Axes,'fontname',font,'fontsize',fsize)
+    if notype == 0
+      set(ax.Axes,'TickLabelInterpreter',type)  
+    end
     % Axis color
     set(ax.Axes,'XColor',Black,'YColor',Black,'ZColor',Black)
     % Inner Data
-    set(ax.Heatmap,'fontname',font,'fontsize',fsize,'Interpreter',type);
+    set(ax.Heatmap,'fontname',font,'fontsize',fsize);
+    if notype == 0
+       set(ax.Heatmap,'Interpreter',type); 
+    end
     set(ax.Heatmap,'LineColor',Black,'LineWidth',lwidth);
     % Colorbar
     colbar = findobj(ax.NodeChildren,'Type','Colorbar');
     for ii = 1:length(colbar)
-        set(colbar(ii),'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
-        set(colbar(ii).Label,'fontname',font,'fontsize',fsize,'Interpreter',type)
+        set(colbar(ii),'fontname',font,'fontsize',fsize)
+        set(colbar(ii).Label,'fontname',font,'fontsize',fsize)
+        if notype == 0
+         set(colbar(ii),'TickLabelInterpreter',type)
+        set(colbar(ii).Label,'Interpreter',type)   
+        end
     end
     % Grayscale
     if grayscale == 1
@@ -419,11 +490,16 @@ for iaxis=1:length(wordaxis)
     ax=struct(wordaxis(iaxis));
     warning('on','MATLAB:structOnObject')
     % Title
-    set(ax.Axes.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Axes.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(ax.Axes.Title,'interpreter',type);
+    end
     % Words style
     ht=findobj(ax.Axes,'Type','Text');
-    set (ht,'fontname',font,'interpreter',type)
+    set (ht,'fontname',font)
+    if notype == 0
+       set (ht,'interpreter',type) 
+    end
 end
 
 % ========================================================================================
@@ -443,16 +519,29 @@ for iaxis=1:length(paraxis)
     % Axis linewidth
     set(ax.Axes,'linewidth',lwidth);
     % Title
-    set(ax.Axes.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Axes.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+       set(ax.Axes.Title,'interpreter',type); 
+    end
     % Axis labels
     set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set([ax.Axes.XLabel ax.Axes.YLabel ax.Axes.ZLabel],...
+        'interpreter',type);
+    end
     % Axis texts (tickslabels)
-    set(ax.Axes,'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
-    set(ax.YRulers,'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
+    set(ax.Axes,'fontname',font,'fontsize',fsize)
+    set(ax.YRulers,'fontname',font,'fontsize',fsize)
+    if notype == 0
+       set(ax.Axes,'TickLabelInterpreter',type)
+    set(ax.YRulers,'TickLabelInterpreter',type) 
+    end
     % Legend
-    set(ax.LegendHandle.Legend,'fontname',font,'fontsize',fsize,'interpreter',type); % Text
+    set(ax.LegendHandle.Legend,'fontname',font,'fontsize',fsize); % Text
+    if notype == 0
+      set(ax.LegendHandle.Legend,'interpreter',type);  
+    end
     set(ax.LegendHandle.Legend,'Color',White,'EdgeColor',Black,'LineWidth',lwidth) % Box
     if strcmpi(type,'latex') % Replace for <undefined> legend
         arrayfun(@(x) set(x,'String',strrep(x.String,'<','$<$')),ax.LegendHandle.Legend)
@@ -471,11 +560,17 @@ for iaxis=1:length(geobuaxis)
     set(ax.Axes,'linewidth',lwidth,'GridColor',Black,'MinorGridColor',Black,...
         'AxisColor',Black);
     % Title
-    set(ax.Axes.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Axes.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(ax.Axes.Title,'interpreter',type);
+    end
     % Axis labels
     set([ax.Axes.LongitudeLabel ax.Axes.LatitudeLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+       set([ax.Axes.LongitudeLabel ax.Axes.LatitudeLabel],...
+        'interpreter',type); 
+    end
     if strcmpi(type,'latex') % Replace degree symbol
         ax.Axes.LongitudeAxis.TickLabels = ...
             arrayfun(@(x) strrep(x,char(176),'$^{\circ}$'),ax.Axes.LongitudeAxis.TickLabels);
@@ -483,13 +578,19 @@ for iaxis=1:length(geobuaxis)
             arrayfun(@(x) strrep(x,char(176),'$^{\circ}$'),ax.Axes.LatitudeAxis.TickLabels);
     end
     set([ax.Axes.LongitudeAxis ax.Axes.LatitudeAxis],...
-        'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type);
+        'fontname',font,'fontsize',fsize);
+    if notype == 0
+        set([ax.Axes.LongitudeAxis ax.Axes.LatitudeAxis],...
+        'TickLabelInterpreter',type);
+    end
     % Scalebar
     set(ax.Axes.Scalebar,'fontname',font,'fontsize',fsize-2)
     % Legend
     leg = findobj(ax.NodeChildren,'Type','legend');
-    set(leg,'fontname',font,'fontsize',fsize,'interpreter',type,...
-        'Linewidth',lwidth,'EdgeColor',Black)
+    set(leg,'fontname',font,'fontsize',fsize,'Linewidth',lwidth,'EdgeColor',Black)
+    if notype == 0
+       set(leg,'interpreter',type) 
+    end
     if strcmpi(type,'latex') % Replace for <undefined> legend
         arrayfun(@(x) set(x,'String',strrep(x.String,'<','$<$')),leg)
         arrayfun(@(x) set(x,'String',strrep(x.String,'>','$>$')),leg)
@@ -497,11 +598,17 @@ for iaxis=1:length(geobuaxis)
     % Size Legend
     sizleg = findobj(ax.NodeChildren,'Type','Axes');
     set(sizleg,'fontname',font,'fontsize',fsize,'Linewidth',lwidth,...
-        'GridColor',Black,'MinorGridColor',Black,'TickLabelInterpreter',type,...
+        'GridColor',Black,'MinorGridColor',Black,...
         'XColor',Black,'YColor',Black,'ZColor',Black)
+    if notype == 0
+       set(sizleg,'TickLabelInterpreter',type) 
+    end
     set(sizleg.Children,'Linewidth',lwidth)
     ht = findobj(sizleg,'Type','Text');
-    set (ht,'fontname',font,'fontsize',fsize,'interpreter',type)
+    set (ht,'fontname',font,'fontsize',fsize)
+    if notype == 0
+       set (ht,'interpreter',type) 
+    end
     % Grayscale
     if grayscale == 1
         geosca = findobj(ax.Axes.Children,'Type','Scatter');
@@ -538,19 +645,26 @@ for iaxis=1:length(geoaxis)
     ax = struct(geoaxis(iaxis));
     warning('on','MATLAB:structOnObject')
     % Title
-    set(ax.Title,...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+    set(ax.Title,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(ax.Title,'interpreter',type);
+    end
     % Axis labels
     set([ax.LongitudeLabel ax.LatitudeLabel],...
-        'fontname',font,'fontsize',fsize,'color',Black,'interpreter',type);
+        'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+       set([ax.LongitudeLabel ax.LatitudeLabel],'interpreter',type); 
+    end
     if strcmpi(type,'latex') % Replace degree symbol
         ax.LongitudeAxis.TickLabels = ...
             arrayfun(@(x) strrep(x,char(176),'$^{\circ}$'),ax.LongitudeAxis.TickLabels);
         ax.LatitudeAxis.TickLabels = ...
             arrayfun(@(x) strrep(x,char(176),'$^{\circ}$'),ax.LatitudeAxis.TickLabels);
     end
-    set([ax.LongitudeAxis ax.LatitudeAxis],...
-        'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type);
+    set([ax.LongitudeAxis ax.LatitudeAxis],'fontname',font,'fontsize',fsize);
+    if notype == 0
+        set([ax.LongitudeAxis ax.LatitudeAxis],'TickLabelInterpreter',type);
+    end
     % Scalebar
     set(ax.Scalebar,'fontname',font,'fontsize',fsize-2)
     % Grayscale
@@ -583,16 +697,23 @@ drawnow % Refresh
 % ========================================================================================
 % Legend General
 leg=findobj(gcf,'Type','Legend');
-set(leg,'fontname',font,'fontsize',fsize,'interpreter',type); % Text
+set(leg,'fontname',font,'fontsize',fsize); % Text
+if notype == 0
+    set(leg,'interpreter',type);
+end
 set(leg,'Color',White,'EdgeColor',Black,'LineWidth',lwidth) % Box
 
 % ========================================================================================
 % Colorbar General
 colbar = findobj(gcf,'Type','Colorbar');
 for ii = 1:length(colbar)
-    set(colbar(ii),'fontname',font,'fontsize',fsize,'TickLabelInterpreter',type)
-    set(colbar(ii).Label,'fontname',font,'fontsize',fsize,'Interpreter',type)
+    set(colbar(ii),'fontname',font,'fontsize',fsize)
+    set(colbar(ii).Label,'fontname',font,'fontsize',fsize)
     set(colbar(ii),'LineWidth',lwidth,'Color',Black)
+    if notype == 0
+        set(colbar(ii),'TickLabelInterpreter',type)
+    set(colbar(ii).Label,'Interpreter',type)
+    end
 end
 
 % ========================================================================================
@@ -601,12 +722,16 @@ annot=findobj(gcf,'Type','Annotation');
 for ii = 1:length(annot)
     % TextArrow
     tearr = findobj(annot(ii),'Type','TextArrow');
-    set(tearr,'fontname',font,'fontsize',fsize,'interpreter',type,...
-        'linewidth',lwidth)
+    set(tearr,'fontname',font,'fontsize',fsize,'linewidth',lwidth)
+    if notype == 0
+      set(tearr,'interpreter',type)  
+    end
     % TextBox
     tebox = findobj(annot(ii),'Type','TextBox');
-    set(tebox,'fontname',font,'fontsize',fsize,'interpreter',type,...
-        'linewidth',lwidth)
+    set(tebox,'fontname',font,'fontsize',fsize,'linewidth',lwidth)
+    if notype == 0
+        set(tebox,'interpreter',type)
+    end
     % Arrow
     arr = findobj(annot(ii),'Type','Arrow');
     set(arr,'LineWidth',lwidth)
