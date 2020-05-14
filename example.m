@@ -1,15 +1,10 @@
 clear, clc, close all;
 
 %%
-% *This is an example of how to create subplots with multiple plot types in MATLAB&#174;* .
-% 
-% You can open this example in the <https://www.mathworks.com/products/matlab/live-editor.html 
-% Live Editor> with MATLAB version 2016a or higher.
-%
-% Read about the <http://www.mathworks.com/help/matlab/ref/subplot.html |subplot|> function in the MATLAB documentation.
-% For more examples, go to <http://www.mathworks.com/discovery/gallery.html MATLAB Plot Gallery>
-%
-% Copyright 2012-2018 The MathWorks, Inc.
+% Reference: MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery -
+% Subplot (2)
+% (https://www.mathworks.com/matlabcentral/fileexchange/35298-matlab-plot-gallery-subplot-2),
+% MATLAB Central File Exchange. Retrieved May 14, 2020.
 
 % Create the data to be plotted
 TBdata = [1990 4889 16.4; 1991 5273 17.4; 1992 5382 17.4; 1993 5173 16.5;
