@@ -81,5 +81,21 @@ Function to modify the style of the graphical representations of MATLAB
 
 ## LineWidth
 
+### Example 1
+
+**Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Set Axes Positions (https://www.mathworks.com/matlabcentral/fileexchange/63458-matlab-plot-gallery-set-axes-positions), MATLAB Central File Exchange. Retrieved May 14, 2020.
+
+| Original        | `setfigpaper('LineWidth',2)`          | 
+|:-------------:|:-------------:|
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot9a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot9b.png" width="100%"></img>  |
+
+### Example 2
+
+**Code:** MathWorks Plot Gallery Team (2020). MATLAB Plot Gallery - Scatter Plot 3D (https://www.mathworks.com/matlabcentral/fileexchange/35288-matlab-plot-gallery-scatter-plot-3d), MATLAB Central File Exchange. Retrieved May 14, 2020.
+
+| Original        | `setfigpaper('LineWidth',1.5)`           | 
+|:-------------:|:-------------:|
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
+
 
 </div>
