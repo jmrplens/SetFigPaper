@@ -23,7 +23,7 @@ With this function it is possible to modify multiple style parameters of MATLAB 
 It can be used in two ways:
 
 * Name-Value pair arguments: `setfigpaper('Width',[20,0.65],'Interpreter','Latex')`. Only the parameters you want to modify are necessary.
-* Arguments only: `setfigpaper([20,0.65],10,'Helvetica','Latex')`. With explicit order: (Width,FontSize,FontName,Interpreter,Grayscale,LineWidth).
+* Only values: `setfigpaper([20,0.65],10,'Helvetica','Latex')`. With explicit order: (Width,FontSize,FontName,Interpreter,Grayscale,LineWidth).
 
 The available options are:
 
