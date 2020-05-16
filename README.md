@@ -1,9 +1,6 @@
 [![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)
 # SetFigPaper
 
-
-<!-- MarkdownTOC autolink="true" levels="1,2" bracket="round" autoanchor="true" style="unordered" indent="\t" -->
-
 - [Introduction](#introduction)
 - [Examples](#examples)
 	- [Grayscale](#grayscale)
@@ -14,8 +11,6 @@
 - [Troubleshooting](#troubleshooting)
 - [Incompatibility Issues](#incompatibility)
 - [Author](#author)
-
-<!-- /MarkdownTOC -->
 
 
 <a id="introduction"></a>
@@ -213,7 +208,7 @@ In some representations, it is necessary to carry out previous steps for the fun
 <a id="incompatibility"></a>
 # Incompatibility Issues
 
-In some versions not all functions are available. The function checks the version so that the incompatible code is not executed.
+*Setfigpaper* is developed in MATLAB 2020. In some versions not all options are available. The function checks the version so that the incompatible code is not executed.
 
 *If you find any error or the modification does not apply to any item, please inform me and I will try to solve it.*
 
