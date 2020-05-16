@@ -224,7 +224,7 @@ In some versions not all functions are available. The function checks the versio
 
 ### MATLAB 2018b (9.5) and earlier
 
-| Type | Axes/Object | Description | Line code |
+| | Axes/Object | Description | Line code |
 | ------ | ------ | ------ | ------ |
 | ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **Heatmap** | Unable to assign an interpreter to text within the map. | `set(ax.Heatmap,'Interpreter',type);` |
 | ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **GraphPlot** | Cannot modify node font. | `set(grap,'nodefontname',...` |
