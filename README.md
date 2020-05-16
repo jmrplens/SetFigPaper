@@ -193,10 +193,11 @@ setfigpaper('LineWidth',1.5)
 
 In some versions not all functions are available. The function checks the version so that the incompatible code is not executed.
 
-### MATLAB 2017b and earlier
+### MATLAB 2018b (9.5) and earlier
 
 * **Heatmap**: Unable to assign an interpreter to text within the map.
 * **GraphPlot**: Cannot modify node font.
+* **Polar Axes**: Grayscale cannot be applied to all elements.
 
 <a id="author"></a>
 # Author
