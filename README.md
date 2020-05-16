@@ -11,6 +11,7 @@
 	- [FontName](#fontname)
 	- [FontSize](#fontsize)
 	- [LineWidth](#linewidth)
+- [Troubleshooting](#troubleshooting)
 - [Incompatibility Issues](#incompatibility)
 - [Author](#author)
 
@@ -187,6 +188,27 @@ setfigpaper('LineWidth',1.5)
 | Original        | setfigpaper           | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
+
+
+<a id="troubleshooting"></a>
+# Troubleshooting
+In some representations, it is necessary to carry out previous steps for the function to work correctly.
+
+* **pie and pie3**: If you use latex interpreter with default labels (percentage) you need to fix the plot before call setfigpaper. Solution:
+	```matlab 
+	p = pie([1 3 0.5 2.5 2]);
+	txt = findobj(p,'Type','Text');
+	arrayfun(@(x) set(x,'String',strrep(x.String,'%','\%')),txt,...
+	'UniformOutput',false)
+	setfigpaper
+	```
+
+* **pareto**: If you use latex interpreter with default ticklabels (percentage) you need to fix the plot before call setfigpaper. Solution:
+	```matlab 
+	[H,ax]  = pareto([200 120 555 608], {'Fred','Ginger','Norman','Max'});
+	ax(2).YTickLabel = arrayfun(@(x) strrep(x,'%','\%'),ax(2).YTickLabel);
+	setfigpaper
+	```
 
 <a id="incompatibility"></a>
 # Incompatibility Issues
