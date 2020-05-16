@@ -11,6 +11,7 @@
 	- [FontName](#fontname)
 	- [FontSize](#fontsize)
 	- [LineWidth](#linewidth)
+- [Release incompatibilities](#release)
 - [Author](#author)
 
 <!-- /MarkdownTOC -->
@@ -186,6 +187,16 @@ setfigpaper('LineWidth',1.5)
 | Original        | setfigpaper           | 
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
+
+<a id="release"></a>
+# Release incompatibilities
+
+In some versions not all functions are available. The function checks the version so that the incompatible code is not executed.
+
+### MATLAB 2017b and earlier
+
+* **Heatmap**: Unable to assign an interpreter to text within the map.
+* **GraphPlot**: Cannot modify node font.
 
 <a id="author"></a>
 # Author
