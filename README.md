@@ -194,7 +194,7 @@ setfigpaper('LineWidth',1.5)
 # Troubleshooting
 In some representations, it is necessary to carry out previous steps for the function to work correctly.
 
-* **pie and pie3**: If you use latex interpreter with default labels (percentage) you need to fix the plot before call setfigpaper. Solution:
+* **pie and pie3**: If you use **LaTeX** interpreter with default labels (percentage) you need to fix the plot before call setfigpaper. Solution:
 	```matlab 
 	p = pie([1 3 0.5 2.5 2]);
 	txt = findobj(p,'Type','Text');
@@ -203,7 +203,7 @@ In some representations, it is necessary to carry out previous steps for the fun
 	setfigpaper
 	```
 
-* **pareto**: If you use latex interpreter with default ticklabels (percentage) you need to fix the plot before call setfigpaper. Solution:
+* **pareto**: If you use **LaTeX** interpreter with default ticklabels (percentage) you need to fix the plot before call setfigpaper. Solution:
 	```matlab 
 	[H,ax]  = pareto([200 120 555 608], {'Fred','Ginger','Norman','Max'});
 	ax(2).YTickLabel = arrayfun(@(x) strrep(x,'%','\%'),ax(2).YTickLabel);
