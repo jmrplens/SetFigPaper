@@ -11,7 +11,7 @@
 	- [FontName](#fontname)
 	- [FontSize](#fontsize)
 	- [LineWidth](#linewidth)
-- [Release incompatibilities](#release)
+- [Incompatibility Issues](#incompatibility)
 - [Author](#author)
 
 <!-- /MarkdownTOC -->
@@ -188,8 +188,8 @@ setfigpaper('LineWidth',1.5)
 |:-------------:|:-------------:|
 | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot10b.png" width="100%"></img>  |
 
-<a id="release"></a>
-# Release incompatibilities
+<a id="incompatibility"></a>
+# Incompatibility Issues
 
 In some versions not all functions are available. The function checks the version so that the incompatible code is not executed.
 
