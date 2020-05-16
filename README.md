@@ -219,7 +219,7 @@ In some versions not all functions are available. The function checks the versio
 
 **Legend meaning:**
 * ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Fixed by version checking.
-* ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) It runs but does not affect.
+* ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) It runs but doesn't affect.
 
 
 ### MATLAB 2018b (9.5) and earlier
