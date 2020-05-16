@@ -195,11 +195,18 @@ In some versions not all functions are available. The function checks the versio
 
 *If you find any error or the modification does not apply to any item, please inform me and I will try to solve it.*
 
+**Legend meaning:**
+* ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Fixed by version checking.
+* ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) It runs but does not affect.
+
+
 ### MATLAB 2018b (9.5) and earlier
 
-* ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **Heatmap**: Unable to assign an interpreter to text within the map.
-* ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **GraphPlot**: Cannot modify node font.
-* ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) **Polar Axes**: Grayscale cannot be applied to all elements.
+| Type | Axes/Object | Description | Line code |
+| ------ | ------ | ------ | ------ |
+| ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **Heatmap** | Unable to assign an interpreter to text within the map. | `set(ax.Heatmap,'Interpreter',type);` |
+| ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **GraphPlot** | Cannot modify node font. | `set(grap,'nodefontname',...` |
+| ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) | **Polar Axes** | Grayscale cannot be applied to all elements. |  |
 
 <a id="author"></a>
 # Author
