@@ -25,6 +25,9 @@ function setfigpaper(varargin)
 %   - 'LineWidth'   Set line width only for axes, not for data.
 %                   Examples: ('LineWidth',2)
 %                   Default: 0.5
+%   - 'Figure'      To apply the function to a specific figure.
+%                   Examples: ('Figure',gcf)
+%                   Default: Last figure created
 %
 % EXAMPLES WITH NAME-VALUE PAIR ARGUMENTS:
 %
@@ -35,7 +38,7 @@ function setfigpaper(varargin)
 %   SETFIGPAPER('Grayscale',true)
 %   ...
 %
-% EXAMPLES WITH VALUE ARGUMENTS ONLY (same examples as above):
+% EXAMPLES WITH VALUE VALUES ONLY (same examples as above):
 %
 %   SETFIGPAPER
 %   SETFIGPAPER(20,10,'Helvetica','Latex')
@@ -96,6 +99,8 @@ addOptional(p,'Grayscale',0,...                 % Default: false or 0
     @(x) x==0 || x==1);
 addOptional(p,'LineWidth',0.5,...               % Default: 0.5
     @(x) isnumeric(x) && isscalar(x) && x>0);
+addOptional(p,'Figure',gcf,...                  % Default: Actual gcf
+    @(x) isobject(x));
 parse(p,varargin{:});
 % Unpacking
 fwidth    = p.Results.Width;
@@ -104,6 +109,7 @@ font      = p.Results.FontName;
 type      = p.Results.Interpreter;
 lwidth    = p.Results.LineWidth;
 grayscale = p.Results.Grayscale;
+fig       = p.Results.Figure;
 if length(fwidth) == 1
     aspect = 0.75;
 else
@@ -122,18 +128,18 @@ White = [1 1 1];
 % ========================================================================================
 % General
 % Set initial properties
-set(gcf,'WindowStyle','normal');
-set(gcf,'paperunits','centimeters');
-set(gcf,'units','centimeters');
+set(fig,'WindowStyle','normal');
+set(fig,'paperunits','centimeters');
+set(fig,'units','centimeters');
 % Set new size and new position
-set(gcf,'PaperSize',[fwidth(1) fwidth(1)*aspect]);
-pos=get(gcf,'position'); % Get actual position
-set(gcf,'Position',[pos(1) pos(2) fwidth(1) fwidth(1)*aspect]);
+set(fig,'PaperSize',[fwidth(1) fwidth(1)*aspect]);
+pos=get(fig,'position'); % Get actual position
+set(fig,'Position',[pos(1) pos(2) fwidth(1) fwidth(1)*aspect]);
 % General color properties
-set(gcf,'color',White); % General Background
-set(findobj(gcf,'color',[0.15 0.15 0.15]),'color',Black); % Gray to black
+set(fig,'color',White); % General Background
+set(findobj(fig,'color',[0.15 0.15 0.15]),'color',Black); % Gray to black
 % General text
-txt = findobj(gcf, 'Type', 'Text');
+txt = findobj(fig, 'Type', 'Text');
 arrayfun(@(x) set(x,'Fontname',font,'FontSize', fsize), txt) ;
 if notype == 0
     arrayfun(@(x) set(x,'Interpreter', type), txt) ;
@@ -143,7 +149,7 @@ set(0,'ShowHiddenHandles','on'); % For hidden objects (e.g. annotations)
 
 % ========================================================================================
 % Common axes
-haxis=findobj(gcf,'type','axes');
+haxis=findobj(fig,'type','axes');
 for iaxis=1:length(haxis)
     % Axes linewidth
     set(haxis(iaxis),'linewidth',lwidth);
@@ -187,7 +193,7 @@ for iaxis=1:length(haxis)
     end
     % Grayscale
     if grayscale == 1
-        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
+        set(fig,'Colormap', rgb2gray(get(fig, 'Colormap')));
         haxis(iaxis).ColorOrder = rgb2gray(haxis(iaxis).ColorOrder);
         
         for jj = 1:length(haxis(iaxis).Children)
@@ -257,7 +263,7 @@ end
 
 % ========================================================================================
 % Polar axes
-polaxis=findobj(gcf,'type','polaraxes');
+polaxis=findobj(fig,'type','polaraxes');
 for iaxis=1:length(polaxis)
     % Polar Text
     set(polaxis(iaxis).ThetaAxis,'fontname',font,'fontsize',fsize,'color',Black);
@@ -277,7 +283,7 @@ for iaxis=1:length(polaxis)
     end
     % Grayscale
     if grayscale == 1
-        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
+        set(fig,'Colormap', rgb2gray(get(fig, 'Colormap')));
         polaxis(iaxis).ColorOrder = rgb2gray(polaxis(iaxis).ColorOrder);
         for jj = 1:length(polaxis(iaxis).Children)
             try %#ok<TRYNC>
@@ -314,7 +320,7 @@ end
 
 % ========================================================================================
 % Stacked axes
-staxis=findobj(gcf,'type','Stacked');
+staxis=findobj(fig,'type','Stacked');
 for iaxis=1:length(staxis)
     % Axis
     for jj = 1:length(staxis(iaxis).AxesProperties)
@@ -371,7 +377,7 @@ end
 
 % ========================================================================================
 % ScatterHistogram
-scataxis=findobj(gcf,'type','scatterhistogram');
+scataxis=findobj(fig,'type','scatterhistogram');
 for iaxis=1:length(scataxis)
     % Grayscale
     if grayscale == 1
@@ -428,7 +434,7 @@ end
 
 % ========================================================================================
 % Heatmap
-heataxis=findobj(gcf,'type','Heatmap');
+heataxis=findobj(fig,'type','Heatmap');
 for iaxis=1:length(heataxis)
     % Main text
     set(heataxis(iaxis),...
@@ -478,14 +484,14 @@ for iaxis=1:length(heataxis)
     end
     % Grayscale
     if grayscale == 1
-        set(gcf,'Colormap', rgb2gray(get(gcf, 'Colormap')));
+        set(fig,'Colormap', rgb2gray(get(fig, 'Colormap')));
         set(heataxis(iaxis),'Colormap', rgb2gray(get(heataxis(iaxis), 'Colormap')));
     end
 end
 
 % ========================================================================================
 % WordCloud
-wordaxis=findobj(gcf,'type','wordcloud');
+wordaxis=findobj(fig,'type','wordcloud');
 for iaxis=1:length(wordaxis)
     % Grayscale
     if grayscale == 1
@@ -510,7 +516,7 @@ end
 
 % ========================================================================================
 % Parallelplot
-paraxis=findobj(gcf,'type','Parallel');
+paraxis=findobj(fig,'type','Parallel');
 for iaxis=1:length(paraxis)
     % Grayscale
     if grayscale == 1
@@ -557,7 +563,7 @@ end
 
 % ========================================================================================
 % GeoBubble
-geobuaxis=findobj(gcf,'type','geobubble');
+geobuaxis=findobj(fig,'type','geobubble');
 for iaxis=1:length(geobuaxis)
     warning('off','MATLAB:structOnObject')
     ax = struct(geobuaxis(iaxis));
@@ -641,7 +647,7 @@ end
 
 % ========================================================================================
 % GeoPlot
-geoaxis=findobj(gcf,'type','geo');
+geoaxis=findobj(fig,'type','geo');
 if ~isempty(geobuaxis); geoaxis=[]; end
 for iaxis=1:length(geoaxis)
     % Main axis
@@ -702,7 +708,7 @@ drawnow % Refresh
 
 % ========================================================================================
 % Legend General
-leg=findobj(gcf,'Type','Legend');
+leg=findobj(fig,'Type','Legend');
 set(leg,'fontname',font,'fontsize',fsize); % Text
 if notype == 0
     set(leg,'interpreter',type);
@@ -711,20 +717,22 @@ set(leg,'Color',White,'EdgeColor',Black,'LineWidth',lwidth) % Box
 
 % ========================================================================================
 % Colorbar General
-colbar = findobj(gcf,'Type','Colorbar');
+colbar = findobj(fig,'Type','Colorbar');
 for ii = 1:length(colbar)
     set(colbar(ii),'fontname',font,'fontsize',fsize)
     set(colbar(ii).Label,'fontname',font,'fontsize',fsize)
+    set(colbar(ii).Title,'fontname',font,'fontsize',fsize)
     set(colbar(ii),'LineWidth',lwidth,'Color',Black)
     if notype == 0
         set(colbar(ii),'TickLabelInterpreter',type)
         set(colbar(ii).Label,'Interpreter',type)
+         set(colbar(ii).Title,'Interpreter',type)
     end
 end
 
 % ========================================================================================
 % Annotation
-annot=findobj(gcf,'Type','Annotation');
+annot=findobj(fig,'Type','Annotation');
 for ii = 1:length(annot)
     % TextArrow
     tearr = findobj(annot(ii),'Type','TextArrow');
@@ -823,5 +831,5 @@ end
 % End process
 drawnow
 set(0,'ShowHiddenHandles','off');
-set(gcf, 'PaperPosition', [0 0 fwidth(1) fwidth(1)*aspect]);
-set(gcf, 'PaperSize', [fwidth(1) fwidth(1)*aspect]);
+set(fig, 'PaperPosition', [0 0 fwidth(1) fwidth(1)*aspect]);
+set(fig, 'PaperSize', [fwidth(1) fwidth(1)*aspect]);

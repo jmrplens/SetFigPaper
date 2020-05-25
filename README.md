@@ -20,7 +20,7 @@ With this function it is possible to modify multiple style parameters of MATLAB 
 It can be used in two ways:
 
 * Name-Value pair arguments: `setfigpaper('Width',[20,0.65],'Interpreter','Latex')`. Only the parameters you want to modify are necessary.
-* Only values: `setfigpaper([20,0.65],10,'Helvetica','Latex')`. With explicit order: (Width,FontSize,FontName,Interpreter,Grayscale,LineWidth).
+* Only values: `setfigpaper([20,0.65],10,'Helvetica','Latex')`. With explicit order: (Width,FontSize,FontName,Interpreter,Grayscale,LineWidth,Figure).
 
 The available options are:
 
@@ -32,6 +32,7 @@ The available options are:
 | `Interpreter` | Text interpreter syntax, 'Latex', 'tex' or 'none'. If you don't want to modify the `interpreter` the value must be `[]` (empty value). |
 | `Grayscale`   | Change all colours to grayscale. [boolean] |
 | `LineWidth`   | Set line width only for axes, not for data. |
+| `Figure`      | Apply to a specific figure. |
 	
 <a id="examples"></a>
 # Examples
