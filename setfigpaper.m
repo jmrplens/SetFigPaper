@@ -94,7 +94,8 @@ addOptional(p,'Width',[19.7556 0.75],...        % Default: [19.7556 0.75]
 addOptional(p,'FontSize',10,...                 % Default: 10
     @(x) isnumeric(x) && isscalar(x));
 addOptional(p,'FontName','Helvetica',@ischar);	% Default: Helvetica
-addOptional(p,'Interpreter',[]);                % Default: []
+addOptional(p,'Interpreter',[],...
+    @(x) ischar(x) || isempty(x));              % Default: []
 addOptional(p,'Grayscale',0,...                 % Default: false or 0
     @(x) x==0 || x==1);
 addOptional(p,'LineWidth',0.5,...               % Default: 0.5
