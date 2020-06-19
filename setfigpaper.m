@@ -834,3 +834,4 @@ drawnow
 set(0,'ShowHiddenHandles','off');
 set(fig, 'PaperPosition', [0 0 fwidth(1) fwidth(1)*aspect]);
 set(fig, 'PaperSize', [fwidth(1) fwidth(1)*aspect]);
+movegui(fig,"center")
