@@ -38,7 +38,7 @@ function setfigpaper(varargin)
 %   SETFIGPAPER('Grayscale',true)
 %   ...
 %
-% EXAMPLES WITH VALUE VALUES ONLY (same examples as above):
+% EXAMPLES WITH VALUES ONLY (same examples as above):
 %
 %   SETFIGPAPER
 %   SETFIGPAPER(20,10,'Helvetica','Latex')
@@ -268,8 +268,14 @@ polaxis=findobj(fig,'type','polaraxes');
 for iaxis=1:length(polaxis)
     % Polar Text
     set(polaxis(iaxis).ThetaAxis,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(polaxis(iaxis).ThetaAxis.Label,'interpreter',type);
+    end
     % Radial Text
     set(polaxis(iaxis).RAxis,'fontname',font,'fontsize',fsize,'color',Black);
+    if notype == 0
+        set(polaxis(iaxis).RAxis.Label,'interpreter',type);
+    end
     % Title
     set(polaxis(iaxis).Title,'fontname',font,'fontsize',fsize,'color',Black);
     if notype == 0
