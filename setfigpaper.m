@@ -268,11 +268,13 @@ polaxis=findobj(fig,'type','polaraxes');
 for iaxis=1:length(polaxis)
     % Polar Text
     set(polaxis(iaxis).ThetaAxis,'fontname',font,'fontsize',fsize,'color',Black);
+    set(polaxis(iaxis).ThetaAxis.Label,'fontname',font,'fontsize',fsize,'color',Black);
     if notype == 0
         set(polaxis(iaxis).ThetaAxis.Label,'interpreter',type);
     end
     % Radial Text
     set(polaxis(iaxis).RAxis,'fontname',font,'fontsize',fsize,'color',Black);
+    set(polaxis(iaxis).RAxis.Label,'fontname',font,'fontsize',fsize,'color',Black);
     if notype == 0
         set(polaxis(iaxis).RAxis.Label,'interpreter',type);
     end
