@@ -64,7 +64,7 @@ setfigpaper('GrayScale',true)
 
 | Original        | setfigpaper         | 
 |:-------------:|:-------------:|
-| <img src="http://jmrplens.com/GitHub_setfigpaper/plot2a.png" width="100%"></img>      | bbb  |
+| <img src="http://jmrplens.com/GitHub_setfigpaper/plot2a.png" width="100%"></img>      | <img src="http://jmrplens.com/GitHub_setfigpaper/plot2b.png" width="100%"></img>  |
 
 
 <a id="interpreter"></a>
