@@ -232,5 +232,5 @@ Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
 
 Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
 
-Donations: https://paypal.me/jmrplens
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q)
 
