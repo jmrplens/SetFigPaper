@@ -1,4 +1,4 @@
-[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](http://jmrplens.com/GitHub_setfigpaper/matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/)
+[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](http://jmrplens.com/GitHub_setfigpaper/matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/)    [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q)
 # SetFigPaper
 
 - [Introduction](#introduction)
