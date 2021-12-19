@@ -1,4 +1,4 @@
-[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/)    [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q) [![Donate](https://img.shields.io/badge/Donate-Ko--fi-brightgreen?color=ff5f5f)](https://ko-fi.com/jmrplens) 
+[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/)    [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q) [![Donate](https://img.shields.io/badge/Donate-Ko--fi-brightgreen?color=ff5f5f)](https://ko-fi.com/jmrplens) 
 
 # SetFigPaper
 
@@ -52,7 +52,7 @@ setfigpaper('GrayScale',true)
 	
 | Original   | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot1a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot1b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot1a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot1b.png" width="100%"></img>  |
 
 ### Example 2
 ```matlab
@@ -65,7 +65,7 @@ setfigpaper('GrayScale',true)
 
 | Original        | setfigpaper         | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot2a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot2bb.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot2a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot2bb.png" width="100%"></img>  |
 
 
 <a id="interpreter"></a>
@@ -82,7 +82,7 @@ setfigpaper('Interpreter','Latex')
 
 | Original        | setfigpaper         | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot3a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot3bb.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot3a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot3bb.png" width="100%"></img>  |
 
 ### Example 2
 ```matlab
@@ -95,7 +95,7 @@ setfigpaper('Interpreter','Latex')
 
 | Original        | setfigpaper           | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot4a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot4b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot4a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot4b.png" width="100%"></img>  |
 
 <a id="fontname"></a>
 ## FontName
@@ -112,7 +112,7 @@ setfigpaper('FontName','Courier')
 
 | Original        | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot3aa.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot3bc.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot3aa.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot3bc.png" width="100%"></img>  |
 
 ### Example 2
 ```matlab
@@ -125,7 +125,7 @@ setfigpaper('FontName','Times New Roman')
 
 | Original        | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot3a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot6b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot3a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot6b.png" width="100%"></img>  |
 
 <a id="fontsize"></a>
 ## FontSize
@@ -141,7 +141,7 @@ setfigpaper('FontSize',6)
 
 | Original        | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot7a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot7b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot7a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot7b.png" width="100%"></img>  |
 
 ### Example 2
 ```matlab
@@ -154,7 +154,7 @@ setfigpaper('FontSize',15)
 
 | Original        | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot8a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot8b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot8a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot8b.png" width="100%"></img>  |
 
 
 <a id="linewidth"></a>
@@ -171,7 +171,7 @@ setfigpaper('LineWidth',2)
 
 | Original        | setfigpaper          | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot9a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot9b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot9a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot9b.png" width="100%"></img>  |
 
 ### Example 2
 ```matlab
@@ -184,7 +184,7 @@ setfigpaper('LineWidth',1.5)
 
 | Original        | setfigpaper           | 
 |:-------------:|:-------------:|
-| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot10a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/¡plot10b.png" width="100%"></img>  |
+| <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot10a.png" width="100%"></img>      | <img src="https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/plot10b.png" width="100%"></img>  |
 
 
 <a id="troubleshooting"></a>
