@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="145.9px" height="20px" viewBox="0 0 145.9 20" style="enable-background:new 0 0 145.9 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{opacity:0.3;}
+	.st3{fill:#515151;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:11px;}
+	.st6{letter-spacing:-2;}
+	.st7{fill:#FFFFFF;}
+	.st8{font-size:8px;}
+</style>
+<g id="Layer_2">
+	<g id="Layer_1-2">
+		<g id="Layer_1-2-2">
+			<g>
+				
+					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="28.65" y1="-356" x2="28.65" y2="-376.0169" gradientTransform="matrix(1 0 0 -1 0 -356)">
+					<stop  offset="0.68" style="stop-color:#CB6015"/>
+					<stop  offset="1" style="stop-color:#A84F13"/>
+				</linearGradient>
+				<path class="st0" d="M57.3,20H3.1c-1.6,0.2-3-1.4-3.1-3.6l0,0V3.9C0,1.7,1.3,0,2.9,0h54.4V20z"/>
+				
+					<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="101.4541" y1="-355.9" x2="101.4541" y2="-376" gradientTransform="matrix(1 0 0 -1 0 -356)">
+					<stop  offset="0.67" style="stop-color:#0376A7"/>
+					<stop  offset="1" style="stop-color:#02688C"/>
+				</linearGradient>
+				<path class="st1" d="M141.5,20H57V0h84.5c2.4-0.1,4.3,1.6,4.4,3.6c0,0,0,0.1,0,0.1v12.5C145.9,18.3,143.9,20,141.5,20L141.5,20z
+					"/>
+				<g>
+					<g class="st2">
+						<g>
+							<text transform="matrix(1 0 0 1 4.5 14.7)" class="st3 st4 st5">M</text>
+							<text transform="matrix(1 0 0 1 13.7 14.7)" class="st3 st4 st5 st6">A</text>
+							<text transform="matrix(1 0 0 1 20.2 14.7)" class="st3 st4 st5">TLAB</text>
+						</g>
+					</g>
+					<g>
+						<text transform="matrix(1 0 0 1 3.5 13.7)" class="st7 st4 st5">M</text>
+						<text transform="matrix(1 0 0 1 12.7 13.7)" class="st7 st4 st5 st6">A</text>
+						<text transform="matrix(1 0 0 1 19.2 13.7)" class="st7 st4 st5">TLAB</text>
+						<text transform="matrix(1 0 0 1 46.7 10)" class="st7 st4 st8">®</text>
+					</g>
+				</g>
+				<g>
+					<g class="st2">
+						<text transform="matrix(1 0 0 1 61.5 14.7)" class="st3 st4 st5">Pick of the Week</text>
+					</g>
+					<text transform="matrix(1 0 0 1 60.5 13.7)" class="st7 st4 st5">Pick of the Week</text>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
