@@ -1,4 +1,4 @@
-[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/)    [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q) [![Donate](https://img.shields.io/badge/Donate-Ko--fi-brightgreen?color=ff5f5f)](https://ko-fi.com/jmrplens) 
+[![View SetFigPaper on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)    [![View SetFigPaper on Mathworks Blog](https://github.com/jmrplens/SetFigPaper/blob/1717319927eddc12c527af971479c0d064716db3/.github/images/matlab-pick-of-the-week-02.svg)](https://blogs.mathworks.com/pick/2020/05/17/changing-figure-settings/) 
 
 # SetFigPaper
 
@@ -11,7 +11,6 @@
 	- [LineWidth](#linewidth)
 - [Troubleshooting](#troubleshooting)
 - [Incompatibility Issues](#incompatibility)
-- [Author](#author)
 
 
 <a id="introduction"></a>
@@ -225,14 +224,5 @@ In some representations, it is necessary to carry out previous steps for the fun
 | ------ | ------ | ------ | ------ |
 | ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **Heatmap** | Unable to assign an interpreter to text within the map. | ` set(ax.Heatmap,'Interpreter',type); ` |
 | ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **GraphPlot** | Cannot modify node font. | `set(grap,'nodefontname',...` |
-| ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) | **Polar Axes** | Grayscale cannot be applied to all elements. |  |
-
-<a id="author"></a>
-# Author
-Jose M. Requena Plens, 2020. (info@jmrplens.com   | joreple@upv.es)
-
-Original concept: Noe Jimenez, 2014. (noe.jimenez@csic.es | nojigon@i3m.upv.es)
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q)
-[![Donate](https://img.shields.io/badge/Donate-Ko--fi-brightgreen?color=ff5f5f)](https://ko-fi.com/jmrplens) 
+| ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) | **Polar Axes** | Grayscale cannot be applied to all elements. |  | 
 
