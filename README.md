@@ -226,3 +226,9 @@ In some representations, it is necessary to carry out previous steps for the fun
 | ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) | **GraphPlot** | Cannot modify node font. | `set(grap,'nodefontname',...` |
 | ![#efb810](https://via.placeholder.com/15/efb810/000000?text=+) | **Polar Axes** | Grayscale cannot be applied to all elements. |  | 
 
+
+---
+
+Maintained by [José M. Requena Plens](https://jmrp.io/) ·
+[Project page](https://jmrp.io/projects/) ·
+Also on [MATLAB File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/75507-setfigpaper)
